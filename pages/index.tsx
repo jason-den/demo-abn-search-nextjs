@@ -1,8 +1,22 @@
-import React from 'react';
-import Head from 'next/head';
-
-import styles from '../styles/Home.module.css';
+import React, { useState } from 'react';
+import axios from 'axios';
 
 export default function Home() {
-  return <div></div>;
+  // const data =
+  const [data, setData] = useState<any | undefined>(undefined);
+  const requestData = async () => {
+    try {
+      const res = await axios.get('/api/SearchByRegistrationEvent');
+      console.log(res);
+      setData(JSON.stringify(res.data));
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+  return (
+    <div>
+      <button onClick={requestData}>load data</button>
+      {data}
+    </div>
+  );
 }
