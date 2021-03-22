@@ -1,6 +1,31 @@
 # ABN SearchByRegistrationEvent with Next.js
 
-How to run:
+## Why this demo:
+It's an experiemnt on marketing lead finding. We try to find out newly registered business and their contact detail. But it turns out a too loog shot from ABN to email address.
+
+## What it can do
+
+It can be used to get newly registered ABN. 
+The result can also be used to do batch ABN look up, finding out a bit more details of them. 
+For example:
+```xml
+<entityType>
+  <entityTypeCode>PRV</entityTypeCode>
+  <entityDescription>Australian Private Company</entityDescription>
+</entityType>
+<mainName>
+  <organisationName>A Demo Company Name PTY LTD</organisationName>
+  <effectiveFrom>2021-03-16</effectiveFrom>
+</mainName>
+<mainBusinessPhysicalAddress>
+  <stateCode>NSW</stateCode>
+  <postcode>2000</postcode>
+  <effectiveFrom>2021-03-16</effectiveFrom>
+  <effectiveTo>0001-01-01</effectiveTo>
+</mainBusinessPhysicalAddress>
+```
+
+### How to run:
 
 ```shell
 git clone [the link of this repo]
